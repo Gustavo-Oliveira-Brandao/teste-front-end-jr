@@ -1,0 +1,55 @@
+@use'./variables'
+
+.produto
+  width: 270px
+  height: 500px
+  border: none
+  border-radius: 10px
+  box-shadow: 0 3px 19px 0 rgba(0, 0, 0, 0.22)
+  margin-right: 62px
+
+  .fotoProduto
+    width: 247px
+    height: 228px
+    margin: 32px 12px 9px 11px
+
+  .infoProduto
+    margin-left: 11px
+    margin-right: 14px
+
+    .nomeProduto
+      width: 245px
+      font-size: 15px
+      font-weight: 300
+      color: variables.$preto
+      margin-bottom: 12px
+
+    .precoOriginal
+      color: #808080
+      font-size: 16px
+      font-weight: 400
+      text-decoration-line: line-through
+
+    .precoAtual
+      color: variables.$preto
+      font-size: 20px
+      font-weight: 700
+      margin-bottom: 2px
+
+
+    .textoParcelas
+      color: variables.$preto
+      font-size: 12px
+      font-weight: 400
+      margin-bottom: 7px
+
+    .textoFrete
+      color: variables.$rosa-primario
+      font-size: 12px
+      font-weight: 400
+      margin-bottom: 12px
+
+  .alinharBotao
+    width: 100%
+    display: flex
+    justify-content: center

@@ -1,9 +1,9 @@
-import styles from "../styles/BotaoHeader.module.sass"
+import styles from "../styles/botoes.module.sass"
 
 function BotaoHeader({icon}:{readonly icon:string}) {
 
     return (
-        <button className={styles.botao}>
+        <button className={styles.botaoHeader}>
             <img src={icon} alt="" />
         </button>
     )
