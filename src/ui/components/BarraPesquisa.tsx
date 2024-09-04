@@ -1,10 +1,9 @@
 import styles from "../styles/BarraPesquisa.module.sass"
 
-function BarraPesquisa() {
+function BarraPesquisa({id, placeholder} : {readonly id: string, readonly placeholder : string}) {
 
     return (
-        <input id="buscaHome" className={styles.barraPesquisa} placeholder="O que você está buscando?" />
-
+        <input id={id} className={styles.barraPesquisa} placeholder={placeholder} />
     )
 
 }

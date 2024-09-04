@@ -13,6 +13,13 @@
     top: 285px
     left: 90px
 
+.alinharBotao
+    display: flex
+    align-items: center
+
+    img
+        margin-right: 12px
+
 .botaoHeader
     width: 24px
     height: 24px
@@ -34,7 +41,7 @@
         height: 128px
         border-radius: 10px
         background: #FFF
-        box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.22)
+        box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.22)
         border: none
 
     .textoCategoria
@@ -83,3 +90,59 @@
     text-transform: uppercase
     border: none
     color: #FFFFFF
+
+.botaoConfira
+    border-radius: 10px
+    background: variables.$rosa-primario
+    width: 131px
+    height: 48px
+    color: #fff
+    text-align: center
+    font-size: 16px
+    font-weight: 900
+    letter-spacing: 1.28px
+    text-transform: uppercase
+    position: absolute
+    left: 40px
+    bottom: 40px
+    border: none
+
+.botaoVerTodos
+    color: var(--Preto, #3F3F40)
+    text-align: center
+    font-size: 15px
+    font-weight: 700
+    background: transparent
+    border: none
+    margin-left: auto
+    margin-right: auto
+    text-decoration: none
+
+
+.botaoMarca
+    width: 211px
+    height: 211px
+    position: relative
+    background: transparent
+    border: none
+
+    .marcaCirculo
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    .marcaLogo
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+.proximaMarca
+    position: absolute
+    bottom: 80px
+    right: 37px
+    width: 56px
+    height: 56px
+    background: transparent
+    border: none

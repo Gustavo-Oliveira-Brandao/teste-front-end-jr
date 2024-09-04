@@ -1,4 +1,6 @@
-let produtos = [
+import {Product} from "../@types/Product";
+
+let produtos : Product[] = [
     {
         productName: "Iphone 11 PRO MAX BRANCO 1",
         descriptionShort: "Iphone 11 PRO MAX BRANCO 1",

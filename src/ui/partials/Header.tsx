@@ -5,6 +5,7 @@ import creditCardIcon from "../../assets/CreditCard.svg"
 import vtexIcon from "../../assets/VtexLogo.svg"
 import boxIcon from "../../assets/Box.svg"
 import heartIcon from "../../assets/Heart.svg"
+import crownIcon from "../../assets/CrownSimple.svg"
 import userIcon from "../../assets/UserCircle.svg"
 import cartIcon from "../../assets/ShoppingCart.svg"
 import BarraPesquisa from "../components/BarraPesquisa"
@@ -31,7 +32,7 @@ function Header() {
             </div>
             <div className={styles.segundaFileiraHeader + " bordaInferior"}>
                 <img className={styles.vtexLogo} src={vtexIcon} alt="" />
-                <BarraPesquisa />
+                <BarraPesquisa id="buscaHome" placeholder="O que você está buscando?"/>
                 <div className={styles.fileiraBotoes}>
                     <BotaoHeader icon={boxIcon} />
                     <BotaoHeader icon={heartIcon} />
@@ -40,13 +41,13 @@ function Header() {
                 </div>
             </div>
             <div className={styles.terceiraFileiraHeader}>
-                <BotaoAbaHeader titulo="Todas categorias" estaDestacado={false} />
-                <BotaoAbaHeader titulo="Supermercado" estaDestacado={false} />
-                <BotaoAbaHeader titulo="Livros" estaDestacado={false} />
-                <BotaoAbaHeader titulo="Moda" estaDestacado={false} />
-                <BotaoAbaHeader titulo="Lançamentos" estaDestacado={false} />
-                <BotaoAbaHeader titulo="Ofertas do dia" estaDestacado={true} />
-                <BotaoAbaHeader titulo="Assinatura" estaDestacado={false} />
+                <BotaoAbaHeader titulo="Todas categorias" estaDestacado={false} temIcon={false}/>
+                <BotaoAbaHeader titulo="Supermercado" estaDestacado={false} temIcon={false} />
+                <BotaoAbaHeader titulo="Livros" estaDestacado={false} temIcon={false} />
+                <BotaoAbaHeader titulo="Moda" estaDestacado={false} temIcon={false} />
+                <BotaoAbaHeader titulo="Lançamentos" estaDestacado={false} temIcon={false} />
+                <BotaoAbaHeader titulo="Ofertas do dia" estaDestacado={true} temIcon={false} />
+                <BotaoAbaHeader titulo="Assinatura" estaDestacado={false} temIcon={true} icon={crownIcon}/>
             </div>
         </header>
     )

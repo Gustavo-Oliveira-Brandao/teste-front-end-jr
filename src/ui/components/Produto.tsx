@@ -1,7 +1,8 @@
 import styles from "../styles/Produto.module.sass"
-import BotaoComprar from "./BotaoComprar";
+import BotaoRosaLargo from "./BotaoRosaLargo";
+import {Product} from "../../data/@types/Product";
 
-function Produto({index, produto}: {readonly index: number, readonly produto: any }) {
+function Produto({index, produto}: {readonly index: number, readonly produto: Product }) {
 
     const currency = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -10,7 +11,7 @@ function Produto({index, produto}: {readonly index: number, readonly produto: an
 
     return (
         <div id={"produto" + index} className={styles.produto}>
-            <img className={styles.fotoProduto} src={produto.photo} alt=""/>
+            <img className={styles.fotoProduto} src={produto.photo} alt={produto.productName}/>
             <div className={styles.infoProduto}>
                 <p className={styles.nomeProduto}>{produto.productName}</p>
                 <p className={styles.precoOriginal}>{currency.format(produto.price * 1.1)}</p>
@@ -19,7 +20,7 @@ function Produto({index, produto}: {readonly index: number, readonly produto: an
                 <p className={styles.textoFrete}>Frete grátis</p>
             </div>
             <div className={styles.alinharBotao}>
-                <BotaoComprar/>
+                <BotaoRosaLargo nome="Comprar"/>
             </div>
         </div>
     )

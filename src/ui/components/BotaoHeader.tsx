@@ -4,7 +4,7 @@ function BotaoHeader({icon}:{readonly icon:string}) {
 
     return (
         <button className={styles.botaoHeader}>
-            <img src={icon} alt="" />
+            <img src={icon} alt="icone" />
         </button>
     )
 }
