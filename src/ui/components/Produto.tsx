@@ -15,7 +15,7 @@ function Produto({index, produto}: {readonly index: number, readonly produto: an
                 <p className={styles.nomeProduto}>{produto.productName}</p>
                 <p className={styles.precoOriginal}>{currency.format(produto.price * 1.1)}</p>
                 <p className={styles.precoAtual}>{currency.format(produto.price)}</p>
-                <p className={styles.textoParcelas}>Ou 2x de {currency.format(produto.price / 2)}</p>
+                <p className={styles.textoParcelas}>Ou 2x de {currency.format(produto.price / 2)} sem juros</p>
                 <p className={styles.textoFrete}>Frete grátis</p>
             </div>
             <div className={styles.alinharBotao}>
