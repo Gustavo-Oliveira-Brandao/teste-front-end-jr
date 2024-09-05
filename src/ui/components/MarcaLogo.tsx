@@ -1,6 +1,6 @@
 import Circle from "../../assets/Circle.svg"
 import styles from "../styles/botoes.module.sass"
-import VtexLogo from "../../assets/VtexLogo.svg"
+import VtexLogo from "../../assets/vtexLogo.svg"
 
 function MarcaLogo(){
 
