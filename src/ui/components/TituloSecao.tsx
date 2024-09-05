@@ -6,7 +6,7 @@ function TituloSecao({titulo, temLinhas}: {readonly titulo: string, readonly tem
     return(
         <div className={styles.row}>
             {temLinhas ? <span className={styles.linhas}></span> : null}
-            <p className={styles.titulo}>{titulo}</p>
+            <h2 className={styles.titulo}>{titulo}</h2>
             {temLinhas ? <span className={styles.linhas}></span> : null}
         </div>
     )

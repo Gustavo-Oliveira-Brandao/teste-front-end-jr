@@ -12,7 +12,7 @@ function SecaoMarcas(){
             <MarcaLogo />
             <MarcaLogo />
             <MarcaLogo />
-            <button className={stylesBotao.proximaMarca}>
+            <button className={stylesBotao.setaProximoCirculo}>
                 <img src={proximoIcon} alt="Proxima marca" />
             </button>
         </div>

@@ -6,8 +6,9 @@ import styles from "../styles/ProdutosRelacionados.module.sass"
 import produtos from "../../data/services/api"
 import anteriorIcon from "../../assets/previous.svg"
 import proximoIcon from "../../assets/next.svg"
+import stylesBotao from "../styles/botoes.module.sass"
 
-function ProdutosRelacionados() {
+function ProdutosRelacionados({abrirModal, modalEstaAberto}:{readonly abrirModal:any, readonly modalEstaAberto : boolean}) {
 
     const [minIndex, setMinIndex] = useState<number>(0)
     const [maxIndex, setMaxIndex] = useState<number>(3)
@@ -38,16 +39,21 @@ function ProdutosRelacionados() {
                 <BotaoCategoriaProdutos nome="Ver todos" ehDestaque={false} />
             </div>
             <div className={styles.carrosselProdutos}>
+                <button onClick={anterior} className={stylesBotao.setaAnterior}>
+                    <img src={anteriorIcon} alt="Produto anterior" />
+                </button>
                 <div className={styles.produtos}>
-                    <img className={styles.setaAnterior} src={anteriorIcon} alt="" onClick={anterior} />
                     {produtos.map((produto, index) => (
                         index <= maxIndex && index >= minIndex ?
-                            <Produto key={produto.productName} index={index} produto={produto} /> :
+                            <Produto key={produto.productName} index={index} produto={produto} abrirModal={abrirModal} modalEstaAberto={modalEstaAberto}/>
+                            :
                             null
                     )
                     )}
-                    <img className={styles.setaProximo} src={proximoIcon} alt="" onClick={proximo} />
                 </div>
+                <button onClick={proximo} className={stylesBotao.setaProximo}>
+                    <img src={proximoIcon} alt="Proximo produto" />
+                </button>
             </div>
         </div>
     )

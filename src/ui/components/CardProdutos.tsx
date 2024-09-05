@@ -1,6 +1,6 @@
 import styles from "../styles/Cards.module.sass"
 import produtosBanner from "../../assets/produtos.png"
-import BotaoRosaPequeno from "./BotaoRosaPequeno";
+import BotaoRosaPequeno from "./BotaoRosaPequeno"
 
 function CardProdutos({descricao}:{readonly descricao:string}) {
 

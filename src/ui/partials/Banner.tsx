@@ -8,7 +8,7 @@ function Banner(){
         <div className={styles.banner}>
             <img className={styles.bannerImg} src={banner} alt="" />
             <span className={styles.opacity}></span>
-            <p className={styles.chamada}>Venha conhecer nossas promoções</p>
+            <h1 className={styles.chamada}>Venha conhecer nossas promoções</h1>
             <p className={styles.desconto}>50% Off nos produtos </p>
             <BotaoRosaGrande nome="Ver produto" />
         </div>
