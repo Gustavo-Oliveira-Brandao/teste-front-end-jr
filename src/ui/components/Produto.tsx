@@ -1,9 +1,8 @@
 import styles from "../styles/Produto.module.sass"
 import BotaoRosaLargo from "./BotaoRosaLargo";
 import { Product } from "../../data/@types/Product";
-import ModalProduto from "./ModalProduto";
 
-function Produto({ index, produto, abrirModal, modalEstaAberto }: { readonly index: number, readonly produto: Product, readonly abrirModal:any, readonly modalEstaAberto : boolean }) {
+function Produto({ index, produto, abrirModal, modalEstaAberto }: { readonly index: number, readonly produto: Product, readonly abrirModal: any, readonly modalEstaAberto: boolean }) {
 
     const currency = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -11,9 +10,8 @@ function Produto({ index, produto, abrirModal, modalEstaAberto }: { readonly ind
     })
 
     return (
-        <>
-            
-            <div onClick={() => abrirModal(true)} id={"produto" + index} className={styles.produto}>
+
+            <div onClick={() => abrirModal(true, index)} id={"produto" + index} className={styles.produto}>
                 <img className={styles.fotoProduto} src={produto.photo} alt={produto.productName} />
                 <div className={styles.infoProduto}>
                     <p className={styles.nomeProduto}>{produto.productName}</p>
@@ -27,11 +25,6 @@ function Produto({ index, produto, abrirModal, modalEstaAberto }: { readonly ind
                 </div>
             </div>
 
-{
-    modalEstaAberto ? <ModalProduto produto={produto} abrirModal={abrirModal} /> : null
-}
-            
-        </>
     )
 }
 

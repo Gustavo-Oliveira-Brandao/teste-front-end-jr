@@ -10,14 +10,18 @@ import SecaoMarcas from "../ui/partials/SecaoMarcas";
 import Footer from "../ui/partials/Footer"
 import { useState } from "react"
 import opacity from "../ui/styles/OpacityController.module.sass"
+import produtos from "../data/services/api"
+import ModalProduto from "../ui/components/ModalProduto"
 
 function Home() {
 
     const [modalEstaAberto, setModalEstaAberto] = useState<boolean>(false)
+    const [indexAtual, setIndexAtual] = useState<number>(0)
 
-    function gerenciarModal(ehPraAbrir:boolean){
+    function gerenciarModal(ehPraAbrir:boolean, index?:number){
         if(ehPraAbrir) {
             setModalEstaAberto(true)
+            setIndexAtual(Number(index))
         }
         if(!ehPraAbrir){
             setModalEstaAberto(false)
@@ -40,6 +44,11 @@ function Home() {
             <TituloSecao titulo="Navegue por marcas" temLinhas={false} />
             <SecaoMarcas />
             <Footer />
+            
+            {
+                modalEstaAberto ? <ModalProduto produto={produtos[indexAtual]} abrirModal={gerenciarModal} /> : null
+            }
+
         </div>
     )
 }
